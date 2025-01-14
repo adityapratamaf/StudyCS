@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\Documents\\TestingCSharp\\Application\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3E420191-5420-43FD-97D1-1BAA57795521}|Application\\Application.csproj|c:\\users\\administrator\\documents\\testingcsharp\\application\\application\\views\\genre\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E420191-5420-43FD-97D1-1BAA57795521}|Application\\Application.csproj|solutionrelative:application\\views\\genre\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E420191-5420-43FD-97D1-1BAA57795521}|Application\\Application.csproj|c:\\users\\administrator\\documents\\testingcsharp\\application\\application\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E420191-5420-43FD-97D1-1BAA57795521}|Application\\Application.csproj|solutionrelative:application\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E420191-5420-43FD-97D1-1BAA57795521}|Application\\Application.csproj|c:\\users\\administrator\\documents\\testingcsharp\\application\\application\\controllers\\genrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E420191-5420-43FD-97D1-1BAA57795521}|Application\\Application.csproj|solutionrelative:application\\controllers\\genrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E420191-5420-43FD-97D1-1BAA57795521}|Application\\Application.csproj|c:\\users\\administrator\\documents\\testingcsharp\\application\\application\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E420191-5420-43FD-97D1-1BAA57795521}|Application\\Application.csproj|solutionrelative:application\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E420191-5420-43FD-97D1-1BAA57795521}|Application\\Application.csproj|c:\\users\\administrator\\documents\\testingcsharp\\application\\application\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E420191-5420-43FD-97D1-1BAA57795521}|Application\\Application.csproj|solutionrelative:application\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E420191-5420-43FD-97D1-1BAA57795521}|Application\\Application.csproj|c:\\users\\administrator\\documents\\testingcsharp\\application\\application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E420191-5420-43FD-97D1-1BAA57795521}|Application\\Application.csproj|solutionrelative:application\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E420191-5420-43FD-97D1-1BAA57795521}|Application\\Application.csproj|c:\\users\\administrator\\documents\\testingcsharp\\application\\application\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3E420191-5420-43FD-97D1-1BAA57795521}|Application\\Application.csproj|solutionrelative:application\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\TestingCSharp\\Application\\Application\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Application\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\TestingCSharp\\Application\\Application\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Application\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAqwDgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-14T07:25:51.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GenreController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\TestingCSharp\\Application\\Application\\Controllers\\GenreController.cs",
+              "RelativeDocumentMoniker": "Application\\Controllers\\GenreController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\TestingCSharp\\Application\\Application\\Controllers\\GenreController.cs",
+              "RelativeToolTip": "Application\\Controllers\\GenreController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T07:21:44.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\TestingCSharp\\Application\\Application\\Views\\Genre\\Index.cshtml",
+              "RelativeDocumentMoniker": "Application\\Views\\Genre\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\TestingCSharp\\Application\\Application\\Views\\Genre\\Index.cshtml",
+              "RelativeToolTip": "Application\\Views\\Genre\\Index.cshtml",
+              "ViewState": "AgIAACkAAAAAAAAAAAAYwDQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-14T07:20:26.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Genre.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\TestingCSharp\\Application\\Application\\Models\\Genre.cs",
+              "RelativeDocumentMoniker": "Application\\Models\\Genre.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\TestingCSharp\\Application\\Application\\Models\\Genre.cs",
+              "RelativeToolTip": "Application\\Models\\Genre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T07:17:17.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\TestingCSharp\\Application\\Application\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Application\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\TestingCSharp\\Application\\Application\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Application\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T07:16:07.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\TestingCSharp\\Application\\Application\\appsettings.json",
+              "RelativeDocumentMoniker": "Application\\appsettings.json",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\TestingCSharp\\Application\\Application\\appsettings.json",
+              "RelativeToolTip": "Application\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-14T07:13:42.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\TestingCSharp\\Application\\Application\\Program.cs",
+              "RelativeDocumentMoniker": "Application\\Program.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\TestingCSharp\\Application\\Application\\Program.cs",
+              "RelativeToolTip": "Application\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T07:12:47.532Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

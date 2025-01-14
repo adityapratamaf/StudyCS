@@ -1,0 +1,88 @@
+﻿@{
+	ViewData["Title"] = "Genre";
+}
+
+@model IEnumerable<Application.Models.Genre>
+
+@if (TempData["SuccessMessage"] != null)
+{
+	<div id="success-alert" class="alert alert-success">
+		@TempData["SuccessMessage"]
+	</div>
+}
+
+<div class="container-fluid">
+
+	<div class="card mt-3">
+		<div class="card-header">
+			<strong>Insert</strong>
+		</div>
+		<div class="card-body">
+			<form asp-action="Store" method="post">
+				<div class="form-group">
+					<div class="mb-3">
+						<input type="text" class="form-control" id="Name_Genre" name="Name_Genre" placeholder="Name Genre" required>
+					</div>
+					<button type="submit" class="btn btn-primary btn-sm">Save</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="card mt-3">
+		<div class="card-header">
+			<strong>Search</strong>
+		</div>
+		<div class="card-body">
+			<form method="get" asp-action="Search">
+				<div class="form-group">
+					<div class="mb-3">
+						<input type="text" class="form-control" id="query" name="query" placeholder="Name Genre">
+					</div>
+					<button type="submit" class="btn btn-primary btn-sm">Search</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="card mt-3">
+		<div class="card-header">
+			<strong>List</strong>
+		</div>
+		<div class="card-body">
+			<table id="dataTables" class="table">
+				<thead>
+					<tr>
+						<th>No</th>
+						<th>Name Genre</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var genre in Model.Select((value, index) => new { value, index }))
+					{
+						<tr>
+							<td>@(genre.index + 1)</td>
+							<td>@genre.value.Name_Genre</td>
+							<td>
+								<form asp-action="Delete" method="post" style="display:inline" onsubmit=" return confirmDelete();">
+									<input type="hidden" name="id" value="@genre.value.Id" />
+									<button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+								</form>
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	function confirmDelete()
+	{
+		return confirm('delete this data item ?');
+	}
+</script>
+
