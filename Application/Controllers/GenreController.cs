@@ -31,6 +31,17 @@ namespace Application.Controllers
             return View(genres);
         }
 
+        public IActionResult Store(Genre model) 
+        {
+            if (ModelState.IsValid) 
+            {
+                _context.Genres.Add(model);
+                _context.SaveChanges();
+                TempData["SuccessMessage"] = "data seccessfully added !";
+            }
+            return RedirectToAction("Index");
+        }
+
         public IActionResult Delete(int id)
         {
             // periksa apakah _context.Genres tidak null
