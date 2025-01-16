@@ -1,0 +1,43 @@
+﻿@{
+	ViewData["Title"] = "Genre";
+}
+
+@model Application.Models.Genre
+
+@if (TempData["SuccessMessage"] != null)
+{
+	<div id="success-alert" class="alert alert-success">
+		@TempData["SuccessMessage"]
+	</div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+	<div id="success-alert" class="alert alert-success">
+		@TempData["ErrorMessage"]
+	</div>
+}
+
+<div class="container-fluid">
+
+	<div class="card mt-3">
+		<div class="card-header">
+			<strong>Insert</strong>
+		</div>
+		<div class="card-body">
+			<form asp-action="Update" method="post">
+				<div class="form-group">
+
+					<input type="hidden" asp-for="Id" />
+
+					<div class="mb-3">
+						<input type="text" class="form-control" asp-for="Name_Genre" id="Name_Genre" name="Name_Genre" placeholder="Name Genre" required>
+					</div>
+
+					<button type="submit" class="btn btn-primary btn-sm">Save</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+

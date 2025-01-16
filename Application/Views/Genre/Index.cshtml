@@ -11,8 +11,16 @@
 	</div>
 }
 
+@if (TempData["ErrorMessage"] != null)
+{
+	<div id="success-alert" class="alert alert-success">
+		@TempData["ErrorMessage"]
+	</div>
+}
+
 <div class="container-fluid">
 
+	@* Insert *@
 	<div class="card mt-3">
 		<div class="card-header">
 			<strong>Insert</strong>
@@ -29,6 +37,7 @@
 		</div>
 	</div>
 
+	@* Search *@
 	<div class="card mt-3">
 		<div class="card-header">
 			<strong>Search</strong>
@@ -45,6 +54,7 @@
 		</div>
 	</div>
 
+	@* List *@
 	<div class="card mt-3">
 		<div class="card-header">
 			<strong>List</strong>
@@ -65,9 +75,11 @@
 							<td>@(genre.index + 1)</td>
 							<td>@genre.value.Name_Genre</td>
 							<td>
+								<a href="@Url.Action("Edit", new { id = genre.value.Id })" class="btn btn-warning btn-sm">Edit</a>
+								@* <a href="@Url.Action("Detail", new { id = genre.value.Id })" class="btn btn-primary btn-sm">View</a> *@
 								<form asp-action="Delete" method="post" style="display:inline" onsubmit=" return confirmDelete();">
 									<input type="hidden" name="id" value="@genre.value.Id" />
-									<button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+									<button type="submit" class="btn btn-danger btn-sm">Delete</button>
 								</form>
 							</td>
 						</tr>

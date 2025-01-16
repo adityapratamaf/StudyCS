@@ -68,3 +68,5 @@ C:\Users\Administrator\Documents\TestingCSharp\Application\Application\obj\Debug
 C:\Users\Administrator\Documents\TestingCSharp\Application\Application\obj\Debug\net6.0\Application.genruntimeconfig.cache
 C:\Users\Administrator\Documents\TestingCSharp\Application\Application\obj\Debug\net6.0\ref\Application.dll
 C:\Users\Administrator\Documents\TestingCSharp\Application\Application\obj\Debug\net6.0\Application.sourcelink.json
+C:\Users\Administrator\Documents\TestingCSharp\Application\Application\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Administrator\Documents\TestingCSharp\Application\Application\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
