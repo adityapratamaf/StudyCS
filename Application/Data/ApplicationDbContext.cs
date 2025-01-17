@@ -10,6 +10,21 @@ namespace Application.Data
         {
         }
 
+        //Deklarasi Tabel
         public DbSet<Genre>? Genres { get; set; }
+        public DbSet<Book>? Books { get; set; }
+
+        //Relasi Tabel
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // eksplisit menentukan relasi
+            modelBuilder.Entity<Book>()
+                .HasOne(b => b.Genre)
+                .WithMany(g => g.Books)
+                .HasForeignKey(b => b.GenreId)
+                .OnDelete(DeleteBehavior.Cascade);
+        }
     }
 }

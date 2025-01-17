@@ -25,7 +25,7 @@ namespace Application.Controllers
                 return NotFound("genres not found.");
             }
 
-            string sql = "SELECT * FROM Genres";
+            string sql = "SELECT * FROM Genres ORDER BY Id DESC";
             var genres = _context.Genres.FromSqlRaw(sql).ToList() ?? new List<Genre>();
 
             return View(genres);
@@ -39,18 +39,22 @@ namespace Application.Controllers
                 _context.SaveChanges();
                 TempData["SuccessMessage"] = "data seccessfully added !";
             }
+            TempData["ErrorMessage"] = "invalid data";
             return RedirectToAction("Index");
         }
 
         public IActionResult Edit(int id)
         {
-            var item = _context.Genres.FirstOrDefault(b => b.Id == id);
+            // cari data berdasarkan ID
+            var item = _context.Genres.FirstOrDefault(g => g.Id == id);
 
             if (item != null)
             {
+                // parsing data genre
                 ViewBag.Genres = _context.Genres.ToList();
                 return View("Edit", item);
             }
+            TempData["ErrorMessage"] = "not found data";
             return RedirectToAction("Index");
         }
 
@@ -118,7 +122,7 @@ namespace Application.Controllers
             }
 
             // form tidak kosong 
-            var results = _context.Genres.Where(s => s.Name_Genre.Contains(query)).ToList();
+            var results = _context.Genres.Where(g => g.Name_Genre.Contains(query)).ToList();
             return View("Index", results);
         }
 

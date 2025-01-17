@@ -1,20 +1,19 @@
 ﻿@{
-	ViewData["Title"] = "Genre";
+	ViewData["Title"] = "Book";
 }
 
-@model IEnumerable<Application.Models.Genre>
-
+@model IEnumerable<Application.Models.Book>
 
 @if (TempData["SuccessMessage"] != null)
 {
-	<div id="success-alert" class="alert alert-success">
+	<div class="alert alert-success">
 		@TempData["SuccessMessage"]
 	</div>
 }
 
 @if (TempData["ErrorMessage"] != null)
 {
-	<div id="success-alert" class="alert alert-success">
+	<div class="alert alert-danger">
 		@TempData["ErrorMessage"]
 	</div>
 }
@@ -22,20 +21,8 @@
 <div class="container-fluid">
 
 	@* Insert *@
-	<div class="card mt-3">
-		<div class="card-header">
-			<strong>Insert</strong>
-		</div>
-		<div class="card-body">
-			<form asp-action="Store" method="post">
-				<div class="form-group">
-					<div class="mb-3">
-						<input type="text" class="form-control" id="Name_Genre" name="Name_Genre" placeholder="Name Genre" required>
-					</div>
-					<button type="submit" class="btn btn-primary btn-sm">Save</button>
-				</div>
-			</form>
-		</div>
+	<div class="mt-3">
+		<a href="@Url.Action("Create")" class="btn btn-primary btn-sm">Insert</a>
 	</div>
 
 	@* Search *@
@@ -47,7 +34,7 @@
 			<form method="get" asp-action="Search">
 				<div class="form-group">
 					<div class="mb-3">
-						<input type="text" class="form-control" id="query" name="query" placeholder="Name Genre">
+						<input type="text" class="form-control" id="query" name="query" placeholder="Name Book">
 					</div>
 					<button type="submit" class="btn btn-primary btn-sm">Search</button>
 				</div>
@@ -65,21 +52,22 @@
 				<thead>
 					<tr>
 						<th>No</th>
-						<th>Name Genre</th>
+						<th>Name Book</th>
 						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
-					@foreach (var genre in Model.Select((value, index) => new { value, index }))
+					@foreach (var book in Model.Select((value, index) => new { value, index }))
 					{
 						<tr>
-							<td>@(genre.index + 1)</td>
-							<td>@genre.value.Name_Genre</td>
+							<td>@(book.index + 1)</td>
+							<td>@book.value.Name_Book</td>
+							<td>@book.value.Genre.Name_Genre</td>
 							<td>
-								<a href="@Url.Action("Edit", new { id = genre.value.Id })" class="btn btn-warning btn-sm">Edit</a>
-								@* <a href="@Url.Action("Detail", new { id = genre.value.Id })" class="btn btn-primary btn-sm">View</a> *@
+								<a href="@Url.Action("Edit", new { id = book.value.Id })" class="btn btn-warning btn-sm">Edit</a>
+								<a href="@Url.Action("Detail", new { id = book.value.Id })" class="btn btn-success btn-sm">View</a>
 								<form asp-action="Delete" method="post" style="display:inline" onsubmit=" return confirmDelete();">
-									<input type="hidden" name="id" value="@genre.value.Id" />
+									<input type="hidden" name="id" value="@book.value.Id" />
 									<button type="submit" class="btn btn-danger btn-sm">Delete</button>
 								</form>
 							</td>
@@ -98,4 +86,3 @@
 		return confirm('delete this data item ?');
 	}
 </script>
-

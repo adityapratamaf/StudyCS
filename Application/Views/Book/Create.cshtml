@@ -1,0 +1,79 @@
+﻿@model Application.Models.Book
+
+@{
+    ViewData["Title"] = "Book";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<div class="container-fluid">
+    <div class="card mt-3">
+        <div class="card-header">
+            <strong>Insert</strong>
+        </div>
+
+        <div class="card-body">
+            <form asp-action="Store" method="post">
+                <div class="form-group">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" asp-for="Name_Book" placeholder="Name Book" required>
+                    </div>
+                    <span asp-validation-for="Name_Book" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="mb-3">
+                        <select asp-for="Status" class="form-control">
+                            <option value="">Status</option>
+                            <option value="Release">Release</option>
+                            <option value="Non-Release">Non Release</option>
+                            <option value="Hold-Release">Hold Release</option>
+                        </select>
+                    </div>
+                    <span asp-validation-for="Status" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" asp-for="Author" placeholder="Author" required>
+                    </div>
+                    <span asp-validation-for="Author" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" asp-for="Publisher" placeholder="Publisher" required>
+                    </div>
+                    <span asp-validation-for="Publisher" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" asp-for="Synopsis" placeholder="Synopsis" required>
+                    </div>
+                    <span asp-validation-for="Synopsis" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="mb-3">
+                        <select asp-for="GenreId" class="form-control" asp-items="@(new SelectList(ViewBag.Genres, "Id", "Name_Genre"))"></select>
+                    </div>
+                    <span asp-validation-for="GenreId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="">
+                        <button type="submit" class="btn btn-primary btn-sm">Save</button>
+                        <a href="@Url.Action("Index")" class="btn btn-secondary btn-sm">Back</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
