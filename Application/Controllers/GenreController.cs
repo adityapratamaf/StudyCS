@@ -39,7 +39,6 @@ namespace Application.Controllers
                 _context.SaveChanges();
                 TempData["SuccessMessage"] = "data seccessfully added !";
             }
-            TempData["ErrorMessage"] = "invalid data";
             return RedirectToAction("Index");
         }
 

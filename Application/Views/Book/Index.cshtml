@@ -53,6 +53,7 @@
 					<tr>
 						<th>No</th>
 						<th>Name Book</th>
+						<th>Genre</th>
 						<th>Action</th>
 					</tr>
 				</thead>
@@ -65,7 +66,7 @@
 							<td>@book.value.Genre.Name_Genre</td>
 							<td>
 								<a href="@Url.Action("Edit", new { id = book.value.Id })" class="btn btn-warning btn-sm">Edit</a>
-								<a href="@Url.Action("Detail", new { id = book.value.Id })" class="btn btn-success btn-sm">View</a>
+								<a href="@Url.Action("Detail", new { id = book.value.Id })" class="btn btn-success btn-sm">Detail</a>
 								<form asp-action="Delete" method="post" style="display:inline" onsubmit=" return confirmDelete();">
 									<input type="hidden" name="id" value="@book.value.Id" />
 									<button type="submit" class="btn btn-danger btn-sm">Delete</button>

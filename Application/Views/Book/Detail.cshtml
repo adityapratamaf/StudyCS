@@ -1,0 +1,36 @@
+﻿@model Application.Models.Book 
+
+@{
+    ViewData["Title"] = "Detail Book";
+}
+
+<div class="container-fluid">
+
+    <div class="card mt-3">
+        <div class="card-header">
+            <strong>@Model.Name_Book</strong>
+        </div>
+		<div class="card-body">
+			<dl class="row">
+				<dt class="col-sm-3">Name</dt>
+				<dd class="col-sm-9">@Model.Name_Book</dd>
+
+				<dt class="col-sm-3">Type</dt>
+				<dd class="col-sm-9">@Model.Status</dd>
+
+				<dt class="col-sm-3">Author</dt>
+				<dd class="col-sm-9">@Model.Author</dd>
+
+				<dt class="col-sm-3">Publisher</dt>
+				<dd class="col-sm-9">@Model.Publisher</dd>
+
+				<dt class="col-sm-3">Synopsis</dt>
+				<dd class="col-sm-9">@Model.Synopsis</dd>
+
+				<dt class="col-sm-3">Genre</dt>
+				<dd class="col-sm-9">@Model.Genre.Name_Genre</dd>
+			</dl>
+		</div>
+    </div>
+
+</div>

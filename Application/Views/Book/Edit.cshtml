@@ -1,7 +1,7 @@
 ﻿@model Application.Models.Book
 
 @{
-    ViewData["Title"] = " Insert Book";
+    ViewData["Title"] = "Edit Book";
 }
 
 @if (TempData["SuccessMessage"] != null)
@@ -25,7 +25,10 @@
         </div>
 
         <div class="card-body">
-            <form asp-action="Store" method="post">
+            <form asp-action="Update" method="post">
+
+                <input type="hidden" asp-for="Id" />
+
                 <div class="form-group">
                     <div class="mb-3">
                         <input type="text" class="form-control" asp-for="Name_Book" placeholder="Name Book" required>

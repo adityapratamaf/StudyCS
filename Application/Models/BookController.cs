@@ -64,6 +64,57 @@ namespace Application.Models
             return RedirectToAction("Create", model);
         }
 
+        public IActionResult Detail(int id)
+        {
+            var item = _context.Books.FirstOrDefault(b => b.Id == id);
+
+            if (item == null)
+            {
+                return NotFound();
+            }
+            ViewBag.Genres = _context.Genres.ToList();
+            return View(item);
+        }
+
+        public IActionResult Edit (int id)
+        {
+            var item = _context.Books.FirstOrDefault(b => b.Id == id);
+            
+            if (item != null)
+            {
+                ViewBag.Genres = _context.Genres.ToList();
+                return View("Edit", item);
+            }
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Update(Book model)
+        {
+            if (ModelState.IsValid)
+            {
+                var item = _context.Books.FirstOrDefault(b => b.Id == model.Id);
+
+                if (item != null)
+                {
+                    item.Name_Book = model.Name_Book;
+                    item.Status = model.Status;
+                    item.Author = model.Author;
+                    item.Publisher = model.Publisher;
+                    item.Synopsis = model.Synopsis;
+                    item.GenreId = model.GenreId;
+
+                    _context.SaveChanges();
+                    TempData["SuccessMessage"] = "data successfully updated";
+                    return RedirectToAction("Index");
+                }
+                TempData["ErrorMessage"] = "data not found";
+                return RedirectToAction("Index");
+            }
+            ViewBag.Genres = _context.Genres.ToList();
+            TempData["ErrorMessage"] = "data successfully updated";
+            return RedirectToAction("Edit", model);
+        }
+
         public IActionResult Delete(int id)
         {
             // mencari data berdasarkan ID
