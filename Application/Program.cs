@@ -3,6 +3,15 @@ using Application.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Tambahkan layanan Session
+builder.Services.AddDistributedMemoryCache(); // Penyimpanan sementara untuk session
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Tentukan timeout sesi jika perlu
+    options.Cookie.HttpOnly = true;  // Mencegah JavaScript mengakses cookie session
+    options.Cookie.IsEssential = true; // Pastikan cookie session disertakan dalam permintaan
+});
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -15,6 +24,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 );
 
 var app = builder.Build();
+
+// Aktifkan session middleware
+app.UseSession();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

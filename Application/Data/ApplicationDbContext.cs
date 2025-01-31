@@ -13,6 +13,7 @@ namespace Application.Data
         //Deklarasi Tabel
         public DbSet<Genre>? Genres { get; set; }
         public DbSet<Book>? Books { get; set; }
+        public DbSet<User>? Users { get; set; }
 
         //Relasi Tabel
         protected override void OnModelCreating(ModelBuilder modelBuilder)

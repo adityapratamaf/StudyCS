@@ -15,6 +15,8 @@ namespace Application.Controllers
 
         public IActionResult Index()
         {
+            var username = HttpContext.Session.GetString("Username");
+            ViewBag.Username = username;  // Menyimpan nilai session ke ViewBag
             return View();
         }
 
